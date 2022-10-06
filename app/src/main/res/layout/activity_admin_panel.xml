@@ -2,10 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AdminPanel">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -23,22 +22,19 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="@drawable/backgroung1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:src="@drawable/logo"></ImageView>
+                android:layout_height="400dp"
+                android:background="@drawable/dashbord_bacground"
+                android:gravity="fill_horizontal"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Garbage Monitoring App"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Admin Panel"
                     android:textColor="#ffffff"
-                    android:textSize="35sp"
+                    android:textSize="40sp"
                     android:textStyle="bold">
 
                 </TextView>
@@ -63,35 +59,37 @@
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="8dp"
                         android:layout_weight="1"
+
                         app:cardCornerRadius="20dp">
+
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/white">
+                            android:background="@color/white">>
 
 
                             <ImageView
-                                android:id="@+id/user"
+                                android:id="@+id/binList"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/sensor"></ImageView>
+                                android:src="@drawable/binslist"></ImageView>
 
                             <TextView
-                                android:id="@+id/txtuser"
+                                android:id="@+id/txtbinList"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/user"
+                                android:layout_below="@id/binList"
                                 android:layout_centerInParent="true"
                                 android:layout_marginTop="10dp"
-                                android:text="Sensor"
+                                android:text="Lists of Bins"
                                 android:textColor="#000"
                                 android:textSize="20sp"
                                 android:textStyle="bold"></TextView>
 
                             <Button
-                                android:id="@+id/btnUser"
+                                android:id="@+id/btnbinEntry"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="@android:color/transparent">
@@ -112,23 +110,23 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/white">>
+                            android:background="@color/white">
 
                             <ImageView
-                                android:id="@+id/admin"
+                                android:id="@+id/binLocation"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/profile"></ImageView>
+                                android:src="@drawable/route"></ImageView>
 
                             <TextView
-                                android:id="@+id/txtAdmin"
+                                android:id="@+id/txtbinLocation"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/admin"
+                                android:layout_below="@id/binLocation"
                                 android:layout_centerInParent="true"
                                 android:layout_marginTop="10dp"
-                                android:text="Administrator"
+                                android:text="Bin Location"
                                 android:textColor="#000"
                                 android:textSize="20sp"
                                 android:textStyle="bold"></TextView>
@@ -149,8 +147,4 @@
 
         </RelativeLayout>
     </ScrollView>
-
-
 </RelativeLayout>
-
-
