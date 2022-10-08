@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Garbage List</string>
+    <string-array name = "garbage_bin">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    </string-array>
+    <string-array name = "garbage_level">
+        <item>20%</item>
+        <item>30%</item>
+        <item>67%</item>
+        <item>12%</item>
+        <item>98%</item>
+        <item>31%</item>
+    </string-array>
+    <string-array name = "garbage_status">
+        <item>Not Ready</item>
+        <item>Not Ready</item>
+        <item>Ready to Pickup</item>
+        <item>Ready to Pickup</item>
+        <item>Not Ready</item>
+        <item>Ready to Pickup</item>
+    </string-array>
+
+
+</resources>
