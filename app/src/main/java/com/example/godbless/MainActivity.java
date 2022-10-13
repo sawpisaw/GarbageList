@@ -9,35 +9,20 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button Admin;
-    private Button User;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_admin_panel);
 
-        Admin = findViewById(R.id.btnAdmin);
-        User = findViewById(R.id.btnUser);
+        Button binList = findViewById(R.id.btnbinEntry);
 
-
-        Admin.setOnClickListener(new View.OnClickListener(){
+        binList.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AdminPanel.class);
-                startActivity(intent);
-            }
-    });
-
-        User.setOnClickListener(new View.OnClickListener(){
-            @Override
-             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, UserPanel.class);
+                Intent intent = new Intent(MainActivity.this, BinList.class);
                 startActivity(intent);
             }
         });
 
     }
-
 }
