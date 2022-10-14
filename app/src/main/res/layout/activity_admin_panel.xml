@@ -22,19 +22,22 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:background="@drawable/dashbord_bacground"
-                android:gravity="fill_horizontal"
-                android:orientation="horizontal">
+                android:layout_height="200dp"
+                android:background="@drawable/backgroung1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/logo"></ImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Admin Panel"
+                    android:text="Garbage Monitoring App"
                     android:textColor="#ffffff"
-                    android:textSize="40sp"
+                    android:textSize="35sp"
                     android:textStyle="bold">
 
                 </TextView>

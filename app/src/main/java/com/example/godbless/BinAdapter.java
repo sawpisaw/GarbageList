@@ -8,6 +8,7 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,16 +51,46 @@ public class BinAdapter extends FirebaseRecyclerAdapter<BinModel,BinAdapter.myVi
 
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull BinModel model) {
+        String filllevel;
+        int value;
        holder.binNo.setText(model.getBin_number());
        holder.fillLevel.setText(model.getFill_level());
        holder.location.setText(model.getLocation());
+       filllevel = model.getFill_level();
+       value = Integer.parseInt(filllevel);
 
-       Glide.with(holder.img.getContext())
+
+
+        if (value <= 25) {
+        Glide.with(holder.img.getContext())
                .load(model.getSurl())
-               .placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark)
+               .placeholder(R.drawable.green)
                .circleCrop()
-               .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
+               .error(R.drawable.green)
                .into(holder.img);
+        }else if (value <= 50) {
+            Glide.with(holder.img.getContext())
+                    .load(model.getSurl())
+                    .placeholder(R.drawable.yellow)
+                    .circleCrop()
+                    .error(R.drawable.yellow)
+                    .into(holder.img);
+        } else if (value <= 75) {
+            Glide.with(holder.img.getContext())
+                    .load(model.getSurl())
+                    .placeholder(R.drawable.orange)
+                    .circleCrop()
+                    .error(R.drawable.orange)
+                    .into(holder.img);
+        } else {
+            Glide.with(holder.img.getContext())
+                    .load(model.getSurl())
+                    .placeholder(R.drawable.red)
+                    .circleCrop()
+                    .error(R.drawable.red)
+                    .into(holder.img);
+        }
+
 
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
